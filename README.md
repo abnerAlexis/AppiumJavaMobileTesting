@@ -51,21 +51,38 @@ It is best for accurate test results.
 You can use only Java or Kotlin for espresso, Swift or Objective-C for XCUITest.
 
 Install Appium
-Check if appium is installed.		appium –v 		if not;
+Check if appium is installed.		appium –v 		
+
+if not;
 If you don’t have Homebrew installed. Install it first. Check	 brew –v
-Install appium.	Google ‘appium mobile app automation’ https://appium.io/ bottom of this web page. Enter below commands one at a time.
+Install appium.	
+
+Google ‘appium mobile app automation’ https://appium.io/ bottom of this web page. 
+
+Enter below commands one at a time.
 brew install node      # get node.js and Check  node –v
+
 npm install -g appium  # installs appium globally
+
 npm install wd         # gets appium client
+
 appium                # start appium
+
 Install desktop version of appium. It allows us to inspect elements in a GUI feel.
-Google ‘appium desktop releases’. & find https://github.com/appium/appium-desktop/releases Download the newest .dmg file for MacOS. Then drop the icon to the applications folder.
+Google ‘appium desktop releases’. 
+& find https://github.com/appium/appium-desktop/releases Download the newest .dmg file for MacOS. Then drop the icon to the applications folder.
 Open appium server GUI from the applications. Your mac machine won’t want to open it for safety. So go to the path below and make a change. System Preferences > Security & Privacy > General and click ‘open anyway’.
+
 Install Android Studio
+
 Android Studio has the emulators that allow us to interact with appium.
-Google ‘android studio’. Find ‘Download Android Studio and SDK’.  https://developer.android.com/studio Download the one with ‘Mack with Apple chip’. Check allow and download.
+Google ‘android studio’. 
+Find ‘Download Android Studio and SDK’.  https://developer.android.com/studio 
+Download the one that correlates with your machine. Check allow and download.
 Find your downloaded file in your ‘Downloads’ folder. Get it installed and move the icon to the Applications folder.
+
 Install Appium Inspector & Setup the Desired Capabilities
+
 Go to https://github.com/appium/appium-inspector/releases  click on the latest version and download the .dmg file.  Move the  icon to applications folder.  
 Open Appium Inspector. Fill Remote Host ‘127.0.0.1’ Remote Port ‘4723’ and Remote Path ‘/wd/hub/’.
 
@@ -75,18 +92,20 @@ Documentation => https://appium.io/docs/en/writing-running-appium/caps/
 How to find appPackage and appActivity:
 Mac: adb shell dumpsys window | grep -E 'mCurrentFocus'
 Windows: adb shell dumpsys window | find "mCurrentFocus"
-
 Then tap ‘start session’.
+
 Setup Appium in Java
+
 Add dependency ‘Java Client’ from https://mvnrepository.com/artifact/io.appium/java-client
 
 Add dependency ‘Selenium Java’ from
 https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java/3.141.59
 
-Add JUnit from https://mvnrepository.com/artifact/junit/junit/4.13.1
+Add JUnit or Testng  from https://mvnrepository.com/
 
 Desired capabilities in a method;
-public static void appiumTest1() {
+
+public static void appiumTest() {
 DesiredCapabilities caps = new DesiredCapabilities();
 caps.setCapability("platformName", "android");
 caps.setCapability("platformVersion", "11");
