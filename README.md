@@ -18,15 +18,16 @@ By running tests against your mobile app, you can verify your app’s correctnes
 Mobile Testing Tools
 Native
 Cross platform
+
 Cross-platform vs Native
 
 Cross-platform
-Native
 Supports all mobile platforms (IOS, Android, Windows).
-Developes, releases and supports one single platform. e.g. Espresso for Android or XCUITest for IOS.
 Supports many programming languages.
-You can use only Java or Kotlin for espresso,
-Swift or Objective-C for XCUITest.
+
+Native
+Developes, releases and supports one single platform. e.g. Espresso for Android or XCUITest for IOS.
+You can use only Java or Kotlin for espresso, Swift or Objective-C for XCUITest.
 
 
 Mobile Platforms
@@ -42,12 +43,12 @@ Operating system for smartphones developed by Microsoft.
 Virtual vs Real Devices
 
 Virtual
-Real - physical devices
 Emulators - runs the same operating system as the physical device that it is emulating. Good option for mobile testing.
-It is best for accurate test results.
 Disadvantage of using emulators - they have limitations including hardware components. e.g. cameras, Bluetooth receivers, GPS receivers.
-You can use only Java or Kotlin for espresso,
-Swift or Objective-C for XCUITest.
+
+Real - physical devices
+It is best for accurate test results.
+You can use only Java or Kotlin for espresso, Swift or Objective-C for XCUITest.
 
 Install Appium
 Check if appium is installed.		appium –v 		if not;
