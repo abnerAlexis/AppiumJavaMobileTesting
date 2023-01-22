@@ -116,6 +116,9 @@ Setting Desired Capabilities in a method;
         caps.setCapability("automationName", "UiAutomator2");
         caps.setCapability("appPackage", "com.android.contacts");
         caps.setCapability("appActivity", "com.android.contacts.activities.PeopleActivity");
+        //Hide the keyboard
+        caps.setCapability("unicodeKeyboard", true);
+        caps.setCapability("resetKeyboard", true);
         //find other capabilities from your appium inspector.
         //find ‘udid’, ‘emulator-5554’ typing ‘adb devices’ on your terminal.
     
