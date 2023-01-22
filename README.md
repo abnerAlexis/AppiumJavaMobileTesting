@@ -105,24 +105,25 @@ Add JUnit or Testng  from https://mvnrepository.com/
 
 Setting Desired Capabilities in a method;
 
-public static void appiumTest() {
-
-DesiredCapabilities caps = new DesiredCapabilities();
-
-    caps.setCapability("platformName", "android");
-    caps.setCapability("platformVersion", "11");
-    caps.setCapability("deviceName", "Pixel-4");
-    caps.setCapability("udid", "emulator-5554");
-    caps.setCapability("automationName", "UiAutomator2");
-    caps.setCapability("appPackage", "com.android.contacts");
-    caps.setCapability("appActivity", "com.android.contacts.activities.PeopleActivity");
-//find other capabilities from your appium inspector.
-//find ‘udid’, ‘emulator-5554’ typing ‘adb devices’ on your terminal.
-
-        try {
-           URL url = new URL("http://127.0.0.1:4723/wd/hub/");
-        } catch (MalformedURLException e) {
-           throw new RuntimeException(e);
-        }
-//find URL from appium inspector (“http://REMOTEHOST:REMOTEPORTREMOTEPATH”)
-}
+    public static void appiumTest() {
+    
+    DesiredCapabilities caps = new DesiredCapabilities();
+    
+        caps.setCapability("platformName", "android");
+        caps.setCapability("platformVersion", "11");
+        caps.setCapability("deviceName", "Pixel-4");
+        caps.setCapability("udid", "emulator-5554");
+        caps.setCapability("automationName", "UiAutomator2");
+        caps.setCapability("appPackage", "com.android.contacts");
+        caps.setCapability("appActivity", "com.android.contacts.activities.PeopleActivity");
+    //find other capabilities from your appium inspector.
+    //find ‘udid’, ‘emulator-5554’ typing ‘adb devices’ on your terminal.
+    
+            try {
+               URL url = new URL("http://127.0.0.1:4723/wd/hub/");
+            } catch (MalformedURLException e) {
+               throw new RuntimeException(e);
+            }
+    //find URL from appium inspector (“http://REMOTEHOST:REMOTEPORTREMOTEPATH”)
+    
+    }

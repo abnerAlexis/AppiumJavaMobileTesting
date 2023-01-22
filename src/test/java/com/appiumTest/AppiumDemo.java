@@ -26,6 +26,7 @@ public class AppiumDemo {
         caps.setCapability("automationName", "UiAutomator2");
         caps.setCapability("appPackage", "com.android.contacts");
         caps.setCapability("appActivity", "com.android.contacts.activities.PeopleActivity");
+        caps.setCapability("unicodeKeyboard", true);
         String firstName = "Alexis";
         String lastName = "Abner";
         String phoneNumber = "2234567890";
