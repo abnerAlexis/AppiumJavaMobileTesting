@@ -7,17 +7,16 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
 
 public class AppiumDemo {
     public static AppiumDriver driver;
-    public static void main(String[] args) {
-        appiumTest1();
-    }
 
-    public static void appiumTest1() {
+    @Test
+    public void appiumTest1() {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("platformName", "android");
         caps.setCapability("platformVersion", "11");
@@ -27,6 +26,7 @@ public class AppiumDemo {
         caps.setCapability("appPackage", "com.android.contacts");
         caps.setCapability("appActivity", "com.android.contacts.activities.PeopleActivity");
         caps.setCapability("unicodeKeyboard", true);
+        caps.setCapability("resetKeyboard", true);
         String firstName = "Alexis";
         String lastName = "Abner";
         String phoneNumber = "2234567890";
