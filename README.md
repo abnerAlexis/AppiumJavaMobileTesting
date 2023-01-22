@@ -103,7 +103,7 @@ https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java/3.141.5
 
 Add JUnit or Testng  from https://mvnrepository.com/
 
-Desired capabilities in a method;
+Setting Desired Capabilities in a method;
 
 public static void appiumTest() {
 
@@ -119,10 +119,10 @@ DesiredCapabilities caps = new DesiredCapabilities();
 //find other capabilities from your appium inspector.
 //find ‘udid’, ‘emulator-5554’ typing ‘adb devices’ on your terminal.
 
-    try {
-       URL url = new URL("http://127.0.0.1:4723/wd/hub/");
-    } catch (MalformedURLException e) {
-       throw new RuntimeException(e);
-    }
+        try {
+           URL url = new URL("http://127.0.0.1:4723/wd/hub/");
+        } catch (MalformedURLException e) {
+           throw new RuntimeException(e);
+        }
 //find URL from appium inspector (“http://REMOTEHOST:REMOTEPORTREMOTEPATH”)
 }
