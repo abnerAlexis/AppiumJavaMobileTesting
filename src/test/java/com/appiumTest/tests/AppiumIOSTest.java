@@ -24,17 +24,17 @@ public class AppiumIOSTest extends BaseIOS{
 
         //Add contact '+' button
         driver.findElement(Add.ADD_CONTACT).click();
-        wait.until(ExpectedConditions.presenceOfElementLocated(NewContact.FIRST_NAME));
+        makeWait(NewContact.FIRST_NAME);
         driver.findElement(NewContact.FIRST_NAME).sendKeys(firstname);
         driver.findElement(NewContact.LAST_NAME).sendKeys(lastname);
         driver.findElement(NewContact.COMPANY).sendKeys(company);
 
         driver.findElement(NewContact.ADD_PHONE).click();
-        wait.until(ExpectedConditions.presenceOfElementLocated(NewContact.ADD_MOBILE_NUMBER));
+        makeWait(NewContact.ADD_MOBILE_NUMBER);
         driver.findElement(NewContact.ADD_MOBILE_NUMBER).sendKeys(mobilePhone);
 
         driver.findElement(NewContact.DONE).click();
-        wait.until(ExpectedConditions.presenceOfElementLocated(AppiumBy.name(firstname + " " + lastname)));
+        makeWait(AppiumBy.name(firstname + " " + lastname));
         driver.findElement(AppiumBy.accessibilityId("iPhone")).click();
     }
 }
