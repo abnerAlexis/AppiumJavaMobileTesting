@@ -3,15 +3,11 @@ package com.appiumTest.tests;
 import com.appiumTest.pages.ios.contacts.Add;
 import com.appiumTest.pages.ios.contacts.NewContact;
 import io.appium.java_client.AppiumBy;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import java.net.MalformedURLException;
 import java.time.Duration;
-import java.util.HashMap;
 
 public class AppiumIOSTest extends BaseIOS{
 
