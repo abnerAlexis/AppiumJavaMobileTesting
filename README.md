@@ -62,7 +62,7 @@ Google ‘appium mobile app automation’ https://appium.io/ bottom of this web 
 Enter below commands one at a time.
 brew install node      # get node.js and Check  node –v
 
-npm install -g appium  # installs appium globally
+npm i -g appium@next  # installs the latest version of appium
 
 npm install wd         # gets appium client
 

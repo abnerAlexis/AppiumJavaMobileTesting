@@ -12,18 +12,18 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
 
-public class AppiumDemo {
-    public static AppiumDriver driver;
+public class AppiumAndroidTest {
+    public AppiumDriver driver;
 
     @Test
-    public void appiumTest1() {
+    public void appiumAndroidTest() {
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("platformName", "android");
         caps.setCapability("platformVersion", "11");
         caps.setCapability("deviceName", "Pixel-4");
         caps.setCapability("udid", "emulator-5554");
         caps.setCapability("automationName", "UiAutomator2");
-        caps.setCapability("appPackage", "com.android.contacts");
+        caps.setCapability("appPackage", "com.android.contacts"); // iPhone doesn't use appPackage and appActivity
         caps.setCapability("appActivity", "com.android.contacts.activities.PeopleActivity");
         caps.setCapability("unicodeKeyboard", true);
         caps.setCapability("resetKeyboard", true);
