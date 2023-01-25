@@ -1,10 +1,9 @@
-package com.appiumTest.pages.android;
+package com.appiumTest.pages.android.contacts;
 
 import io.appium.java_client.AppiumBy;
 import org.openqa.selenium.By;
 
 public class NewContact {
-    public static final By ADD_CONTACT = AppiumBy.id("com.android.contacts:id/floating_action_button_container");
     public static final By CANCEL_ACCOUNT_ENTRY = AppiumBy.id("com.android.contacts:id/left_button");
     public static final By FIRST_NAME = AppiumBy.xpath("//*[@text = 'First name']");
     public static final By LAST_NAME = AppiumBy.xpath("//*[@text = 'Last name']");

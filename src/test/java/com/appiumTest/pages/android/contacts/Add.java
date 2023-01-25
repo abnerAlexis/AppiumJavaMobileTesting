@@ -1,4 +1,4 @@
-package com.appiumTest.pages.android;
+package com.appiumTest.pages.android.contacts;
 
 import org.openqa.selenium.By;
 

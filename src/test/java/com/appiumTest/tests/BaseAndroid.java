@@ -1,23 +1,22 @@
 package com.appiumTest.tests;
 
-import com.appiumTest.pages.ios.contacts.NewContact;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.ios.IOSDriver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.security.PublicKey;
 import java.time.Duration;
 
 public class BaseAndroid {
-    public AppiumDriver driver;
+    protected AppiumDriver driver;
+    private WebDriverWait wait;
+    private static final int WAIT_SECONDS = 20;
 
-    @BeforeClass
+    @BeforeSuite
     public void setUp() throws MalformedURLException {
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
         desiredCapabilities.setCapability("platformName", "android");
@@ -31,10 +30,10 @@ public class BaseAndroid {
         desiredCapabilities.setCapability("resetKeyboard", true);
 
         driver = new AndroidDriver(new URL("http://127.0.0.1:4723/"), desiredCapabilities);
+        wait = new WebDriverWait(driver, Duration.ofSeconds(WAIT_SECONDS));
     }
 
-    public void makeWait(By element) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+    protected void waitElement(By element) {
         wait.until(ExpectedConditions.presenceOfElementLocated(element));
     }
 }
